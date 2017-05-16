@@ -1,0 +1,22 @@
+{
+  "disabled": true,
+  "bindings": [
+    {
+      "name": "mySbMsg",
+      "type": "serviceBusTrigger",
+      "direction": "in",
+      "topicName": "toaugment",
+      "subscriptionName": "facebook_profile_augment",
+      "connection": "AzureWebJobsServiceBus"
+    },
+    {
+      "name": "profileDoc",
+      "type": "documentDB",
+      "databaseName": "missingchildren",
+      "collectionName": "facebookprofiles",
+      "createIfNotExists": true,
+      "connection": "MyAccount_COSMOSDB",     
+      "direction": "out"
+    }
+  ]
+}

@@ -1,0 +1,21 @@
+{
+  "disabled": false,
+  "bindings": [
+    {
+      "name": "mySbMsg",
+      "type": "serviceBusTrigger",
+      "direction": "in",
+      "queueName": "facebook_profile_store",
+      "connection": "AzureWebJobsServiceBus"
+    },
+    {
+      "name": "profileDoc",
+      "type": "documentDB",
+      "databaseName": "missingchildren",
+      "collectionName": "facebookprofiles",
+      "createIfNotExists": true,
+      "connection": "MyAccount_COSMOSDB",     
+      "direction": "out"
+    }
+  ]
+}

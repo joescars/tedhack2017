@@ -1,0 +1,22 @@
+{
+  "bindings": [
+    {
+      "topicName": "toaugment",
+      "subscriptionName": "facebook_profile_augment",
+      "name": "inMsg",
+      "type": "serviceBusTrigger",
+      "direction": "in",
+      "connection": "AzureWebJobsServiceBus",
+      "accessRights": "Manage"
+    },
+    {
+      "type": "serviceBus",
+      "name": "outMsg",
+      "queueName": "facebook_profile_store",
+      "connection": "AzureWebJobsServiceBus",
+      "accessRights": "Manage",
+      "direction": "out"
+    }
+  ],
+  "disabled": false
+}

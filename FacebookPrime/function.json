@@ -1,0 +1,20 @@
+{
+  "disabled": false,
+  "bindings": [
+    {
+      "authLevel": "function",
+      "name": "req",
+      "type": "httpTrigger",
+      "direction": "in"
+    },
+    {
+      "topicName": "toaugment",
+      "subscriptionName": "facebook_profile_augment",
+      "name": "outItem",
+      "direction": "out",
+      "connection": "AzureWebJobsServiceBus",
+      "accessRights": "Manage",
+      "type": "serviceBus"
+    }
+  ]
+}
